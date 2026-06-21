@@ -58,7 +58,10 @@ SQL_DB_URL = "sqlite:///./hvac_agent.db"
 sql_engine   = create_db(SQL_DB_URL)
 ingestion    = IngestionPipeline(db_path=DB_PATH)
 query_engine = QueryEngine(db_path=DB_PATH)
-
+except Exception as e:
+    print(f"Warning: Could not initialize: {e}")
+    ingestion = None
+    query_engine = None
 
 # ── Security helpers ──────────────────────────────────────────────────────────
 
