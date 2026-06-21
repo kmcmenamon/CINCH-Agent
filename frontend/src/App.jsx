@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-const API = "https://cinch-agent-production.up.railway.app";
+const API = "http://localhost:8000";
 const DEMO_CUSTOMER = "demo-customer-001";
 
 const api = async (path, opts = {}) => {

@@ -1,8 +1,11 @@
 {
-  "name": "cinch",
+  "name": "cinch-frontend",
   "version": "1.0.0",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "build": "echo 'Build complete'"
-  }
+    "dev": "vite",
+    "build": "mkdir -p dist && cp -r public/* dist/ 2>/dev/null || true && cp src/App.* dist/ 2>/dev/null || true"
+  },
+  "dependencies": {},
+  "devDependencies": {}
 }
